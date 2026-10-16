@@ -1,0 +1,16 @@
+Id,Name,Start,End,Type,Recurring,Notes
+M-1005,"Swim: 2,400 yd",2026-10-05 06:00,2026-10-05 06:45,Workout,Plan,Pool.
+,Work (office),2026-10-05 08:00,2026-10-05 17:00,Work,Weekdays,Includes commute
+,Work (office),2026-10-06 08:00,2026-10-06 17:00,Work,Weekdays,Includes commute
+M-1006,Bike: Intervals 60 min,2026-10-06 18:00,2026-10-06 19:00,Workout,Plan,Trainer.
+M-1007,Run: Tempo 6.5 mi,2026-10-07 05:45,2026-10-07 06:40,Workout,Plan,See plan for pace.
+,Work (office),2026-10-07 08:00,2026-10-07 17:00,Work,Weekdays,Includes commute
+M-1008,Swim + strength 60 min,2026-10-08 06:00,2026-10-08 07:00,Workout,Plan,"Pool, then core."
+,Work (office),2026-10-08 08:00,2026-10-08 17:00,Work,Weekdays,Includes commute
+M-1009,Bike: Easy spin 40 min,2026-10-09 06:00,2026-10-09 06:40,Workout,Plan,
+,Work (office),2026-10-09 08:00,2026-10-09 17:00,Work,Weekdays,Includes commute
+,Dinner with friends,2026-10-09 19:00,2026-10-09 21:30,Family,,
+M-1010,Run: Long 12 mi,2026-10-10 07:00,2026-10-10 08:55,Workout,Plan,Keep on Saturday morning.
+,Kids' swim lesson,2026-10-10 10:00,2026-10-10 11:00,Family,Saturdays,
+M-1011,Brick: Ride 2 h 30 min + run 3 mi,2026-10-11 07:00,2026-10-11 09:55,Workout,Plan,Key session.
+,Family brunch,2026-10-11 11:00,2026-10-11 12:30,Family,,

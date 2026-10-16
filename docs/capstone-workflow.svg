@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1360" viewBox="0 0 1600 1360" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1f2a44"/>
+    </marker>
+  </defs>
+  <style>
+    .agent { fill: #8f8ae6; }
+    .tool { fill: #2f6fdb; }
+    .dec { fill: #2f6fdb; }
+    .out { fill: #ffffff; stroke: #1f2a44; stroke-width: 1.5; }
+    .act { fill: #f3f2fd; stroke: #8f8ae6; stroke-width: 2; }
+    .ln { stroke: #1f2a44; stroke-width: 2; fill: none; marker-end: url(#a); }
+    .grp { fill: none; stroke-width: 1.5; stroke-dasharray: 6 5; }
+    .w { fill: #ffffff; text-anchor: middle; }
+    .d { fill: #1f2a44; text-anchor: middle; }
+    .lbl { fill: #1f2a44; font-size: 13px; }
+    .cap { fill: #5b6475; font-size: 12px; font-weight: bold; letter-spacing: 0.6px; }
+  </style>
+
+  <rect width="1600" height="1360" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="40" y="42" font-size="26" font-weight="bold" fill="#1f2a44">Workout Program Manager: single agent with a sub-agent</text>
+  <text x="40" y="68" font-size="15" fill="#5b6475">Capstone prototype v1. Text input, synthetic data, nothing is written without the user's approval.</text>
+
+  <!-- Data group -->
+  <rect x="220" y="110" width="650" height="160" rx="10" fill="#f1f5ff" stroke="#93a8d8" class="grp"/>
+  <text x="232" y="129" class="cap">TOOL / DATA (synthetic, read by main agent)</text>
+  <rect x="230" y="145" width="110" height="110" class="tool"/>
+  <text class="w" font-size="13"><tspan x="285" y="195">Notion</tspan><tspan x="285" y="212">Calendar</tspan></text>
+  <rect x="360" y="145" width="110" height="110" class="tool"/>
+  <text class="w" font-size="13"><tspan x="415" y="195">Workout plan</tspan><tspan x="415" y="212">(Notion MD)</tspan></text>
+  <rect x="490" y="145" width="110" height="110" class="tool"/>
+  <text class="w" font-size="13"><tspan x="545" y="195">Garmin-style</tspan><tspan x="545" y="212">CSV</tspan></text>
+  <rect x="620" y="145" width="110" height="110" class="tool"/>
+  <text class="w" font-size="13"><tspan x="675" y="187">Memory:</tspan><tspan x="675" y="204">preferences +</tspan><tspan x="675" y="221">past changes</tspan></text>
+  <rect x="750" y="145" width="110" height="110" class="tool"/>
+  <text class="w" font-size="13"><tspan x="805" y="180" font-weight="bold">Training</tspan><tspan x="805" y="197" font-weight="bold">rules library</tspan><tspan x="805" y="218" font-size="11">verified citations;</tspan><tspan x="805" y="232" font-size="11">also used by verifier</tspan></text>
+  <path d="M560,270 V351" class="ln"/>
+  <text x="570" y="316" class="lbl">② reads</text>
+
+  <!-- User -->
+  <circle cx="170" cy="420" r="72" fill="#2f6fdb"/>
+  <text x="170" y="427" class="w" font-size="22" font-weight="bold">User</text>
+
+  <!-- Main agent -->
+  <rect x="400" y="355" width="320" height="130" rx="18" class="agent"/>
+  <text class="w"><tspan x="560" y="405" font-size="20" font-weight="bold">Main agent</tspan><tspan x="560" y="430" font-size="14">Workout program manager</tspan><tspan x="560" y="450" font-size="13">triages · drafts · combines · writes</tspan></text>
+
+  <!-- User <-> main agent -->
+  <path d="M243,398 H396" class="ln"/>
+  <text class="lbl" text-anchor="middle"><tspan x="320" y="372">① reports change</tspan><tspan x="320" y="388">(text; voice later)</tspan></text>
+  <path d="M400,445 H246" class="ln"/>
+  <text class="lbl" text-anchor="middle"><tspan x="320" y="465">asks as it goes,</tspan><tspan x="320" y="480">one question at a time</tspan></text>
+
+  <!-- Safety triage decision -->
+  <path d="M720,420 H786" class="ln"/>
+  <polygon points="900,320 1010,420 900,520 790,420" class="dec"/>
+  <text class="w"><tspan x="900" y="405" font-size="15" font-weight="bold">③ Medical</tspan><tspan x="900" y="423" font-size="15" font-weight="bold">red flag?</tspan><tspan x="900" y="443" font-size="11">(injury, symptoms,</tspan><tspan x="900" y="457" font-size="11">medical question)</tspan></text>
+
+  <!-- Yes: stop & refer -->
+  <path d="M1010,420 H1056" class="ln"/>
+  <text x="1018" y="410" class="lbl" font-weight="bold">Yes</text>
+  <rect x="1060" y="375" width="230" height="90" rx="8" class="out"/>
+  <text class="d"><tspan x="1175" y="407" font-size="15" font-weight="bold">Stop &amp; refer</tspan><tspan x="1175" y="427" font-size="12">suggest a clinician;</tspan><tspan x="1175" y="443" font-size="12">plan stays unchanged</tspan></text>
+  <path d="M1175,375 V90 H170 V344" class="ln"/>
+
+  <!-- No: main agent drafts -->
+  <path d="M900,520 V566" class="ln"/>
+  <text x="910" y="548" class="lbl" font-weight="bold">No</text>
+  <rect x="790" y="570" width="220" height="90" rx="12" class="act"/>
+  <text class="d"><tspan x="900" y="600" font-size="15" font-weight="bold">④ Main agent drafts</tspan><tspan x="900" y="620" font-size="12">using the rules library:</tspan><tspan x="900" y="637" font-size="12">move · shorten · replace · skip · rest</tspan></text>
+
+  <!-- Sub-agent -->
+  <rect x="1080" y="535" width="300" height="145" rx="14" stroke="#8f8ae6" class="grp"/>
+  <text x="1094" y="555" class="cap">SUB-AGENT (temporary helper)</text>
+  <rect x="1100" y="565" width="260" height="100" rx="16" class="agent"/>
+  <text class="w"><tspan x="1230" y="600" font-size="16" font-weight="bold">⑤ Verification sub-agent</tspan><tspan x="1230" y="622" font-size="12">time · calendar · equipment</tspan><tspan x="1230" y="639" font-size="12">no intensity spikes · citations</tspan></text>
+  <path d="M1010,615 H1096" class="ln"/>
+  <text x="1053" y="605" class="lbl" text-anchor="middle">draft</text>
+
+  <!-- Fail loop -->
+  <path d="M1140,665 V720 H900 V664" class="ln"/>
+  <text x="1020" y="740" class="lbl" text-anchor="middle">fails → redraft (max 2)</text>
+
+  <!-- Pass -> combined result -->
+  <path d="M1250,665 V810 H1044" class="ln"/>
+  <text class="lbl"><tspan x="1260" y="740">⑥ passes, or after 2 failed</tspan><tspan x="1260" y="756">redrafts it goes to the user</tspan><tspan x="1260" y="772">with the open issues flagged</tspan></text>
+  <rect x="760" y="770" width="280" height="80" rx="40" fill="#a7e3a0"/>
+  <text class="d"><tspan x="900" y="804" font-size="15" font-weight="bold">Combined result: proposal</tspan><tspan x="900" y="825" font-size="12">change table · rationale · citations</tspan></text>
+
+  <!-- User decision -->
+  <path d="M760,810 H674" class="ln"/>
+  <text x="715" y="800" class="lbl" text-anchor="middle" font-size="12">⑦ shown</text>
+  <polygon points="560,715 670,810 560,905 450,810" class="dec"/>
+  <text class="w"><tspan x="560" y="803" font-size="15" font-weight="bold">⑧ User decides</tspan><tspan x="560" y="823" font-size="12">Accept / Edit / Reject</tspan></text>
+
+  <!-- Edit -->
+  <path d="M560,715 V489" class="ln"/>
+  <text x="570" y="700" class="lbl" font-weight="bold">Edit</text>
+  <text class="lbl" text-anchor="end"><tspan x="550" y="590">plain-language</tspan><tspan x="550" y="606">feedback → new draft</tspan></text>
+
+  <!-- Accept -->
+  <path d="M560,905 V946" class="ln"/>
+  <text x="570" y="930" class="lbl" font-weight="bold">Accept</text>
+  <rect x="420" y="950" width="280" height="90" rx="8" class="out"/>
+  <text class="d"><tspan x="560" y="980" font-size="15" font-weight="bold">⑨ Main agent writes changes</tspan><tspan x="560" y="1001" font-size="12">to Notion Calendar + workout plan</tspan><tspan x="560" y="1018" font-size="12">(the only write in the loop)</tspan></text>
+
+  <!-- Reject -->
+  <path d="M450,810 H404" class="ln"/>
+  <text x="427" y="800" class="lbl" font-weight="bold" text-anchor="middle">Reject</text>
+  <rect x="250" y="775" width="150" height="70" rx="8" class="out"/>
+  <text class="d" font-size="14"><tspan x="325" y="806">Plan stays</tspan><tspan x="325" y="824">unchanged</tspan></text>
+
+  <!-- Legend -->
+  <text x="40" y="560" font-size="18" font-weight="bold" fill="#2f4fd6">Legend</text>
+  <circle cx="58" cy="585" r="12" fill="#2f6fdb"/><text x="85" y="590" class="lbl">Person</text>
+  <rect x="43" y="607" width="30" height="20" rx="6" class="agent"/><text x="85" y="622" class="lbl">Agent</text>
+  <rect x="48" y="638" width="20" height="20" class="tool"/><text x="85" y="653" class="lbl">Tool / data</text>
+  <polygon points="58,667 70,679 58,691 46,679" class="dec"/><text x="85" y="684" class="lbl">Decision</text>
+  <path d="M42,708 H72" class="ln"/><text x="85" y="713" class="lbl">Information / action</text>
+  <rect x="42" y="728" width="32" height="18" rx="9" fill="#a7e3a0"/><text x="85" y="742" class="lbl">Combined result</text>
+  <rect x="43" y="758" width="30" height="20" rx="5" class="act"/><text x="85" y="773" class="lbl">Step done by agent</text>
+  <rect x="43" y="788" width="30" height="20" rx="4" class="out"/><text x="85" y="803" class="lbl">Outcome</text>
+
+  <!-- Bottom band A: offline evals -->
+  <rect x="40" y="1080" width="500" height="250" rx="14" stroke="#9aa3b2" class="grp"/>
+  <text x="55" y="1101" class="cap">OFFLINE: EVALS (outside the live loop)</text>
+  <rect x="60" y="1120" width="110" height="110" class="tool"/>
+  <text class="w" font-size="13"><tspan x="115" y="1160">Test set:</tspan><tspan x="115" y="1177">5 personas</tspan><tspan x="115" y="1194">+ variants</tspan></text>
+  <rect x="200" y="1120" width="110" height="110" class="tool"/>
+  <text class="w" font-size="13"><tspan x="255" y="1160">Graders:</tspan><tspan x="255" y="1177">expected</tspan><tspan x="255" y="1194">outcomes</tspan></text>
+  <rect x="340" y="1120" width="110" height="110" class="tool"/>
+  <text class="w" font-size="13"><tspan x="395" y="1160">Arize:</tspan><tspan x="395" y="1177">traces +</tspan><tspan x="395" y="1194">scores</tspan></text>
+  <text x="55" y="1265" class="lbl">Run every test case through the loop, trace it,</text>
+  <text x="55" y="1283" class="lbl">and score it against its expected outcome.</text>
+
+  <!-- Bottom band B: v2 research agent (proactive) -->
+  <rect x="560" y="1080" width="560" height="250" rx="14" stroke="#9aa3b2" class="grp"/>
+  <text x="575" y="1101" class="cap">LATER (v2): RESEARCH AGENT (proactive pattern)</text>
+  <rect x="580" y="1125" width="170" height="64" rx="32" fill="#d9d6f7"/>
+  <text class="d" font-size="13"><tspan x="665" y="1152" font-weight="bold">Time trigger</tspan><tspan x="665" y="1170">e.g., monthly</tspan></text>
+  <path d="M750,1157 H806" class="ln"/>
+  <rect x="810" y="1120" width="290" height="74" rx="16" class="agent"/>
+  <text class="w" font-size="13"><tspan x="955" y="1150" font-weight="bold">Background research agent</tspan><tspan x="955" y="1170">scans new peer-reviewed studies</tspan></text>
+  <path d="M955,1194 V1218" class="ln"/>
+  <polygon points="955,1222 1015,1265 955,1308 895,1265" class="dec"/>
+  <text class="w" font-size="12"><tspan x="955" y="1262" font-weight="bold">You</tspan><tspan x="955" y="1277" font-weight="bold">approve?</tspan></text>
+  <text x="1022" y="1240" class="lbl" font-size="12">proposed</text>
+  <text x="1022" y="1255" class="lbl" font-size="12">updates +</text><text x="1022" y="1270" class="lbl" font-size="12">sources</text>
+  <path d="M895,1265 H796" class="ln"/>
+  <text x="845" y="1255" class="lbl" font-weight="bold" text-anchor="middle">Yes</text>
+  <rect x="680" y="1215" width="112" height="100" class="tool"/>
+  <text class="w" font-size="12"><tspan x="736" y="1258" font-weight="bold">Training</tspan><tspan x="736" y="1274" font-weight="bold">rules library</tspan></text>
+  <text x="580" y="1250" class="lbl" font-size="12">never edits</text>
+  <text x="580" y="1265" class="lbl" font-size="12">rules without</text>
+  <text x="580" y="1280" class="lbl" font-size="12">your sign-off</text>
+
+  <!-- Bottom band C: other later features -->
+  <rect x="1140" y="1080" width="430" height="250" rx="14" stroke="#9aa3b2" class="grp"/>
+  <text x="1155" y="1101" class="cap">LATER: OTHER FEATURES</text>
+  <text class="lbl"><tspan x="1160" y="1135">• Voice input (dictation)</tspan><tspan x="1160" y="1165">• Proactive trip trigger: when a trip is added to</tspan><tspan x="1172" y="1183">the calendar, the agent offers to adapt the plan</tspan><tspan x="1160" y="1213">• Live Garmin and calendar integrations</tspan><tspan x="1160" y="1243">• Cross-user behavior data: out of scope for v1</tspan><tspan x="1172" y="1261">(conflicts with privacy + synthetic-data rules)</tspan></text>
+</svg>

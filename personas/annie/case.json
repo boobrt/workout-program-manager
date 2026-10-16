@@ -1,0 +1,12 @@
+{
+  "case_id": "ANNIE-01",
+  "now": "Monday, October 5, 2026, 12:30 pm",
+  "message": "Hey! Starting this Wednesday my daughter has soccer after school, and I have to pick her up at 5:30 every Wednesday through the fall. That's right when I usually do my easy run. Can you rework my plan around it?",
+  "scripted_answers": [
+    "Mornings are fine. I already run at 6 on Thursdays, so 6 am Wednesday works.",
+    "Yes, make it the same every Wednesday through the race."
+  ],
+  "scripted_decisions": [
+    {"decision": "accept", "feedback": ""}
+  ]
+}

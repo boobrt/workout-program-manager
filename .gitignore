@@ -1,0 +1,18 @@
+# Secrets: your Anthropic API key lives here. Never upload it.
+.env
+
+# Python's private install and its caches
+.venv/
+__pycache__/
+
+# Agent run folders (rebuilt on every run)
+runs/
+
+# Mac system files
+.DS_Store
+
+# The prototype page as rebuilt by prototype/build.py (prototype.zip is kept)
+prototype/site/
+
+# Unzipped test copies of prototype.zip
+prototype 2/

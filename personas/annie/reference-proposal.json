@@ -1,0 +1,68 @@
+{
+  "sessions": [
+    {
+      "session": "intervals",
+      "date": "2026-10-06",
+      "start": "17:45",
+      "end": "19:00",
+      "miles": 7,
+      "intensity": "quality"
+    },
+    {
+      "session": "tempo",
+      "date": "2026-10-08",
+      "start": "06:00",
+      "end": "07:10",
+      "miles": 8,
+      "intensity": "quality"
+    },
+    {
+      "session": "long",
+      "date": "2026-10-10",
+      "start": "07:00",
+      "end": "09:40",
+      "miles": 16,
+      "intensity": "quality"
+    },
+    {
+      "session": "intervals",
+      "date": "2026-10-13",
+      "start": "17:45",
+      "end": "19:00",
+      "miles": 8,
+      "intensity": "quality"
+    },
+    {
+      "session": "tempo",
+      "date": "2026-10-15",
+      "start": "06:00",
+      "end": "07:10",
+      "miles": 8,
+      "intensity": "quality"
+    },
+    {
+      "session": "long",
+      "date": "2026-10-17",
+      "start": "07:00",
+      "end": "09:50",
+      "miles": 17,
+      "intensity": "quality"
+    },
+    {
+      "session": "easy",
+      "date": "2026-10-07",
+      "start": "06:00",
+      "end": "07:00",
+      "miles": 6,
+      "intensity": "easy"
+    },
+    {
+      "session": "easy",
+      "date": "2026-10-14",
+      "start": "06:00",
+      "end": "07:00",
+      "miles": 6,
+      "intensity": "easy"
+    }
+  ]
+}

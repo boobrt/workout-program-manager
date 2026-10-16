@@ -1,0 +1,40 @@
+Id,Name,Start,End,Type,Recurring,Notes
+D-1005,Gym: Olympic lifting + back squat,2026-10-05 06:00,2026-10-05 07:15,Workout,Plan,
+,Work,2026-10-05 08:30,2026-10-05 17:00,Work,Weekdays,
+D-1006,Gym: Metcon + rowing intervals,2026-10-06 06:00,2026-10-06 07:00,Workout,Plan,
+,Work,2026-10-06 08:30,2026-10-06 17:00,Work,Weekdays,
+D-1007,Gym: Gymnastics + accessories,2026-10-07 06:00,2026-10-07 07:00,Workout,Plan,
+,Work,2026-10-07 08:30,2026-10-07 17:00,Work,Weekdays,
+D-1008,Gym: Heavy deadlift + press + sled,2026-10-08 06:00,2026-10-08 07:15,Workout,Plan,
+,Work,2026-10-08 08:30,2026-10-08 17:00,Work,Weekdays,
+D-1009,Gym: Competition-style workout,2026-10-09 06:00,2026-10-09 07:00,Workout,Plan,
+,Work,2026-10-09 08:30,2026-10-09 17:00,Work,Weekdays,
+,Flights: home to Hanoi (via Seoul),2026-10-10 06:30,2026-10-11 21:00,Travel,,About 22 h door to door. Vietnam is 14 hours ahead of home. Times are local at each end.
+D-1010,Gym: Long aerobic + skill,2026-10-10 08:00,2026-10-10 09:00,Workout,Plan,Planned before the trip was booked.
+D-1012,Gym: Olympic lifting + back squat,2026-10-12 06:00,2026-10-12 07:15,Workout,Plan,Planned before the trip was booked.
+,Family: Hanoi Old Quarter and food tour,2026-10-12 08:30,2026-10-12 20:00,Family,,
+D-1013,Gym: Metcon + rowing intervals,2026-10-13 06:00,2026-10-13 07:00,Workout,Plan,Planned before the trip was booked.
+,Family: Ha Long Bay day trip,2026-10-13 07:00,2026-10-13 20:00,Family,,Bus pickup at the hotel at 7:00 am.
+D-1014,Gym: Gymnastics + accessories,2026-10-14 06:00,2026-10-14 07:00,Workout,Plan,Planned before the trip was booked.
+,Family: museums and water puppet show,2026-10-14 08:30,2026-10-14 20:00,Family,,
+D-1015,Gym: Heavy deadlift + press + sled,2026-10-15 06:00,2026-10-15 07:15,Workout,Plan,Planned before the trip was booked.
+,"Flight: Hanoi to Da Nang, drive to Hoi An",2026-10-15 07:00,2026-10-15 13:00,Travel,,Leave the hotel at 7:00 am.
+,Family: Hoi An old town,2026-10-15 15:00,2026-10-15 20:00,Family,,
+D-1016,Gym: Competition-style workout,2026-10-16 06:00,2026-10-16 07:00,Workout,Plan,Planned before the trip was booked.
+,Family: cooking class and beach,2026-10-16 08:30,2026-10-16 20:00,Family,,
+D-1017,Gym: Long aerobic + skill,2026-10-17 08:00,2026-10-17 09:00,Workout,Plan,Planned before the trip was booked.
+,Family: My Son day trip,2026-10-17 08:30,2026-10-17 19:00,Family,,
+,Family: lantern evening,2026-10-18 16:00,2026-10-18 21:00,Family,,
+D-1019,Gym: Olympic lifting + back squat,2026-10-19 06:00,2026-10-19 07:15,Workout,Plan,Planned before the trip was booked.
+,Flight: Da Nang to Ho Chi Minh City,2026-10-19 07:00,2026-10-19 12:30,Travel,,Leave the hotel at 7:00 am.
+,Family: city afternoon,2026-10-19 14:00,2026-10-19 20:00,Family,,
+D-1020,Gym: Metcon + rowing intervals,2026-10-20 06:00,2026-10-20 07:00,Workout,Plan,Planned before the trip was booked.
+,Family: Cu Chi tunnels,2026-10-20 08:30,2026-10-20 18:00,Family,,
+D-1021,Gym: Gymnastics + accessories,2026-10-21 06:00,2026-10-21 07:00,Workout,Plan,Planned before the trip was booked.
+,Family: Mekong Delta day trip,2026-10-21 07:30,2026-10-21 19:00,Family,,Bus pickup at 7:30 am.
+D-1022,Gym: Heavy deadlift + press + sled,2026-10-22 06:00,2026-10-22 07:15,Workout,Plan,Planned before the trip was booked.
+,Family: markets and farewell dinner,2026-10-22 08:30,2026-10-22 21:00,Family,,
+D-1023,Gym: Competition-style workout,2026-10-23 06:00,2026-10-23 07:00,Workout,Plan,Planned before the trip was booked.
+,Flights: Ho Chi Minh City to home (via Seoul),2026-10-23 07:30,2026-10-23 18:00,Travel,,About 22 h door to door. Times are local at each end.
+D-1024,Gym: Long aerobic + skill,2026-10-24 08:00,2026-10-24 09:00,Workout,Plan,
+,Family: unpack and groceries,2026-10-24 10:00,2026-10-24 12:00,Family,,

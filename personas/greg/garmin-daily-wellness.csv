@@ -1,0 +1,10 @@
+Date,Resting HR,Overnight HRV (ms),HRV Status,Sleep (h),Sleep Score,Body Battery at Wake,Training Readiness,Avg Stress
+2026-09-27,51,72,Balanced,7.4,82,88,79,22
+2026-09-28,50,74,Balanced,7.6,85,90,83,20
+2026-09-29,51,70,Balanced,7.2,80,86,76,24
+2026-09-30,52,69,Balanced,7.1,78,82,72,26
+2026-10-01,51,71,Balanced,7.3,81,85,75,23
+2026-10-02,52,68,Balanced,7.0,77,80,70,25
+2026-10-03,51,70,Balanced,7.5,83,87,78,22
+2026-10-04,63,46,Low,4.9,41,38,14,58
+2026-10-05,60,51,Low,6.1,55,47,22,49
