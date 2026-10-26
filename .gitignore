@@ -16,3 +16,6 @@ prototype/site/
 
 # Unzipped test copies of prototype.zip
 prototype 2/
+
+# Local preview copy of prototype/studio/index.html with the AI helper filled in
+prototype/studio-preview/

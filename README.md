@@ -28,6 +28,10 @@ capstone/
 
 ## The prototype (Product Faculty LMS upload)
 
+**Current version (since Oct 24, 2026): `prototype/studio/index.html`.** The prototype is now built in the Product Faculty studio, one whole page at a time, and this file is the latest page (bring it back into the studio as is). It has moved well past `src/` and `build.py` below, so do not rebuild it from those. Real-AI eval results are in `docs/eval-*.md` and are recorded inside the page.
+
+The original build, kept for reference:
+
 ```
 prototype/
 ├── src/          The page's own code (app.js, body.html, styles.css) and make_data.py, which packs personas/ into data.js
