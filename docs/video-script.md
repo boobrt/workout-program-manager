@@ -31,6 +31,8 @@ Target length: **3:45** (15 seconds of buffer). Timings below are at Bob's recor
 ## 1:45–2:45 · Live demo (~60 words; let the screen carry it)
 **Slide 5 (two seconds), then the prototype**
 
+> Here’s the prototype, running on real AI.
+
 1. Click **Happy path · Annie** → **Submit to the agent**. Her new soccer pickup clashes with her Wednesday easy run.
 2. On the proposal, point at **Planned sessions kept: 2 of 2**, the **week at a glance**, and one source chip such as *B3 · coaching practice*.
 3. Click **Edit** → **Keep Wednesday’s run in the evening**. It re-plans the run for right after pickup.
