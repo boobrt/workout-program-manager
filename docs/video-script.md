@@ -17,7 +17,7 @@ Target length: **3:45** (15 seconds of buffer), about 550 spoken words. Record i
 > I’m Bob, and I built the Workout Program Manager: an AI agent that keeps your training plan on track when life gets in the way.
 > It’s for people who train 3 to 6 days a week toward a fitness goal while their schedules keep changing. I’m one of them.
 > When a busy week, a trip or an illness hits, re-planning lands at the worst moment, so people skip instead of modify, or make training decisions that may sacrifice results.
-> That matters. In a study of over 5,000 gym members, 63% quit within three months. And elite athletes who completed over 80% of their planned training weeks were 7 times more likely to hit their goal.
+> That matters. In a study of over 5,000 gym members, 63% quit within 3 months. And elite athletes who completed over 80% of their planned training weeks were 7 times more likely to hit their goal.
 > So the goal isn’t a better plan. It’s keeping more of the plan.
 
 ## 0:50–1:35 · The solution (~120 words)
@@ -44,10 +44,10 @@ Target length: **3:45** (15 seconds of buffer), about 550 spoken words. Record i
 ## 2:35–3:30 · Evaluation (~115 words)
 **Slide 6 → 7** (optional: a quick cut to the prototype’s Evals tab showing 5 of 5)
 
-> I tested 5 made-up athletes, each built to break the agent a different way: a happy path, food poisoning, two weeks abroad with one resistance band, a swollen ankle, and a week with only 40 minutes free. Each has written expectations from my plan, and I judged every real-AI run myself.
-> Round 1 looked like 5 passes, but on review, Marcus’s refusal initially immediately offered upper-body workouts my plan doesn’t allow.
-> Round 2 found more: Annie’s suggestions looped, and Leo’s plan showed 60 minutes against a 40-minute limit and could still be approved. The cause was the page, not the agent: it counted one combined session twice.
-> I fixed each one, and in round three, all 5 passed.
+> I tested 5 made-up athletes, each built to break the agent a different way: a happy path, food poisoning, 2 weeks abroad with 1 resistance band, a swollen ankle, and a week with only 40 minutes free. Each has written expectations from my plan, and I judged every real-AI run myself.
+> Round 1 looked like 5 passes, but on review, Marcus’s refusal initially offered upper-body workouts my plan doesn’t allow.
+> Round 2 found more: Annie’s suggestions looped, and Leo’s plan showed 60 minutes against a 40-minute limit and could still be approved. The cause was the page, not the agent: it counted 1 combined session twice.
+> I fixed each one, and in Round 3, all 5 passed.
 
 ## 3:30–3:45 · Closing (~45 words)
 **Slide 8, then your face**
