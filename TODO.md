@@ -22,7 +22,7 @@
 ## To-do
 
 ### Phase 2 · Design (current)
-- [ ] **PRD** (`docs/PRD.md`), built by interview
+- [x] **PRD**: written in the Product Faculty Capstone Studio; latest export filed as `docs/capstone-prd.xlsx` (Oct 28, 2026). The earlier plan for `docs/PRD.md` by interview was replaced by this.
   - [ ] Overview and problem (with evidence)
   - [ ] Goals and non-goals
   - [ ] Users and personas
@@ -63,7 +63,7 @@
 - [ ] Final metrics and results write-up
 
 ### Deliverables
-- [ ] Move `docs/PRD.md` into the course's Google Doc template
+- [ ] Submit the PRD (`docs/capstone-prd.xlsx`, the course's Agentic AI PRD template) the way the course asks
 - [ ] Script and record the 4-minute video
 
 ---
