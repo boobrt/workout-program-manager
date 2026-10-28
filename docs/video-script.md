@@ -1,6 +1,6 @@
-# 4-minute video: script (v4, Oct 28, 2026; edited by Bob)
+# 4-minute video: script (v5, Oct 28, 2026; Bob's edits, then trimmed slides 3, 4 and 6)
 
-Target length: **3:45** (15 seconds of buffer), about 550 spoken words. Record in Loom, then submit the share link via Capstone page → "Review final submission". Skip prompt syntax and code: the judges want the problem, the product, proof that it works, and proof that you tested it.
+Target length: **3:45** (15 seconds of buffer). Timings below are at Bob's recorded pace (about 122 words a minute; slide 4's old notes took 1:05). Spoken words now total about 405, which comes to about 3:50 with a 1-minute demo, so use the cut list at the bottom if a take runs over. Record in Loom, then submit the share link via Capstone page → "Review final submission". Skip prompt syntax and code: the judges want the problem, the product, proof that it works, and proof that you tested it.
 
 **Slides** (8, in the deck "Workout Program Manager video slides"): 1 Title · 2 Problem · 3 Why it matters · 4 How it works · 5 Watch for three things · *(live demo)* · 6 Five test cases · 7 Three rounds · 8 Takeaway. Each slide's speaker notes hold its lines.
 
@@ -11,25 +11,24 @@ Target length: **3:45** (15 seconds of buffer), about 550 spoken words. Record i
 
 ---
 
-## 0:00–0:50 · Problem and why it matters (~120 words)
+## 0:00–1:05 · Problem and why it matters (~135 words)
 **Slide 1 → 2 → 3**
 
 > I’m Bob, and I built the Workout Program Manager: an AI agent that keeps your training plan on track when life gets in the way.
 > It’s for people who train 3 to 6 days a week toward a fitness goal while their schedules keep changing. I’m one of them.
 > When a busy week, a trip or an illness hits, re-planning lands at the worst moment, so people skip instead of modify, or make training decisions that may sacrifice results.
-> That matters. In a study of over 5,000 gym members, 63% quit within 3 months. And elite athletes who completed over 80% of their planned training weeks were 7 times more likely to hit their goal.
-> So the goal isn’t a better plan. It’s keeping more of the plan.
+> That matters. 63% of gym members quit within 3 months. Elite athletes who completed over 80% of their planned weeks were 7 times more likely to hit their goal. And another study showed endurance can hold for up to 15 weeks if you cut volume, not intensity.
+> So the goal isn’t a better plan. It’s preserving the benefits.
 
-## 0:50–1:35 · The solution (~120 words)
+## 1:05–1:45 · The solution (~80 words; was ~135)
 **Slide 4**
 
-> The athlete types what changed, in plain words. The agent reads 4 records: their calendar, their plan, their recent Garmin training, and what it remembers about their preferences.
-> Then it decides. If something it needs is missing, it asks, one question at a time. It never guesses. If the athlete reports illness or injury, it refuses to plan training and offers their own choices instead.
-> Otherwise it proposes which sessions to move, shorten, replace or skip, with its reasons and the training rules it used, each from a citation-verified library.
-> Before the athlete sees it, the page checks the proposal itself: a calendar clash, a blown time limit, or training through an injury switches Approve off. The full Python version also has a separate reviewer Agent.
-> The athlete approves, edits or rejects. Edit sends it back to re-plan. Only Approve writes to the calendar, and success is measured as planned sessions kept.
+> The athlete types what changed. The agent reads their calendar, plan, Garmin fitness tracker data and preferences.
+> If something is missing, it asks one question. If they report illness or injury, it refuses to plan training.
+> Otherwise it proposes changes, citing rules from a citation-verified library. The page then checks for calendar clashes, time limits and safety before the athlete can approve.
+> Edit re-plans, and only Approve writes to the calendar. Success is measured in planned sessions kept.
 
-## 1:35–2:35 · Live demo (~60 words; let the screen carry it)
+## 1:45–2:45 · Live demo (~60 words; let the screen carry it)
 **Slide 5 (two seconds), then the prototype**
 
 1. Click **Happy path · Annie** → **Submit to the agent**. Her new soccer pickup clashes with her Wednesday easy run.
@@ -41,27 +40,27 @@ Target length: **3:45** (15 seconds of buffer), about 550 spoken words. Record i
 > It moved Annie’s run instead of skipping it, kept it easy, and labelled its rule as coaching practice, not research. One tap re-planned it for the evening, and only my approval changed her calendar.
 > When Marcus asks if he can run on a swollen ankle, it refuses, points him to a clinician, and leaves every choice to him.
 
-## 2:35–3:30 · Evaluation (~115 words)
+## 2:45–3:35 · Evaluation (~100 words; was ~125)
 **Slide 6 → 7** (optional: a quick cut to the prototype’s Evals tab showing 5 of 5)
 
-> I tested 5 made-up athletes, each built to break the agent a different way: a happy path, food poisoning, 2 weeks abroad with 1 resistance band, a swollen ankle, and a week with only 40 minutes free. Each has written expectations from my plan, and I judged every real-AI run myself.
+> I tested 5 made-up athletes, each built to break the agent a different way, from a swollen ankle to a week with only 40 free minutes. I judged every real-AI run myself, against written expectations.
 > Round 1 looked like 5 passes, but on review, Marcus’s refusal initially offered upper-body workouts my plan doesn’t allow.
 > Round 2 found more: Annie’s suggestions looped, and Leo’s plan showed 60 minutes against a 40-minute limit and could still be approved. The cause was the page, not the agent: it counted 1 combined session twice.
 > I fixed each one, and in Round 3, all 5 passed.
 
-## 3:30–3:45 · Closing (~45 words)
+## 3:35–3:50 · Closing (~30 words)
 **Slide 8, then your face**
 
-> The hard part wasn’t generating a plan. It was knowing when not to, and checking the agent’s numbers with my own.
-> Next: real Notion and Garmin data, voice input, and a research agent that proposes new rules for my approval.
+> The hard part wasn’t generating a plan. It was knowing when not to.
+> Life will always break the plan. The Workout Program Manager makes sure it doesn’t break your progress. Thanks for watching.
+
+*(The next features stay on slide 8 but aren’t spoken.)*
 
 ---
 
-## If you run long, cut these first
-1. In the problem: the gym-member sentence (“In a study of over 5,000 gym members…”). Slide 3 still shows the 63%.
-2. In the solution: “The full Python version also has a separate reviewer Agent.”
-3. In the demo: step 3 (Edit to the evening). Go straight from the proposal to Approve.
-4. In the closing: the “Next” sentence. Slide 8 still shows it.
+## If you still run long, cut these first
+1. In the problem: the 15-week sentence (“And another study showed…”). Slide 3 still shows it.
+2. In the demo: step 3 (Edit to the evening). Go straight from the proposal to Approve.
 
 ## The research behind slide 3 (say it exactly this way)
 - **63% / fewer than 4%.** Sperandei S, Vieira MC, Reis AC. Adherence to physical activity in an unsupervised setting: explanatory variables for high attrition rates among fitness center members. *J Sci Med Sport.* 2016;19(11):916–920. [doi:10.1016/j.jsams.2015.12.522](https://doi.org/10.1016/j.jsams.2015.12.522). Records of 5,240 members of one fitness center in Rio de Janeiro: 63% abandoned before the third month; fewer than 4% stayed more than 12 months. *Careful:* these are gym members in general, not people on structured plans. Say “gym members”.
