@@ -1,4 +1,4 @@
-# 4-minute video: script (v3, Oct 25, 2026)
+# 4-minute video: script (v4, Oct 28, 2026; edited by Bob)
 
 Target length: **3:45** (15 seconds of buffer), about 550 spoken words. Record in Loom, then submit the share link via Capstone page → "Review final submission". Skip prompt syntax and code: the judges want the problem, the product, proof that it works, and proof that you tested it.
 
@@ -15,19 +15,19 @@ Target length: **3:45** (15 seconds of buffer), about 550 spoken words. Record i
 **Slide 1 → 2 → 3**
 
 > I’m Bob, and I built the Workout Program Manager: an AI agent that keeps your training plan on track when life gets in the way.
-> It’s for people who train four to six days a week toward a goal while their schedules keep changing. I’m one of them: five or six days a week.
-> When a busy week, a trip or an illness hits, re-planning lands at the worst moment, so people skip instead of modify, and repeated skips end the plan.
-> That matters. In a study of over five thousand gym members, 63 percent quit within three months. And elite athletes who completed over 80 percent of their planned training weeks were seven times more likely to hit their goal.
+> It’s for people who train 3 to 6 days a week toward a fitness goal while their schedules keep changing. I’m one of them.
+> When a busy week, a trip or an illness hits, re-planning lands at the worst moment, so people skip instead of modify, or make training decisions that may sacrifice results.
+> That matters. In a study of over 5,000 gym members, 63% quit within three months. And elite athletes who completed over 80% of their planned training weeks were 7 times more likely to hit their goal.
 > So the goal isn’t a better plan. It’s keeping more of the plan.
 
 ## 0:50–1:35 · The solution (~120 words)
 **Slide 4**
 
-> The athlete types what changed, in plain words. The agent reads four records: their calendar, their plan, their recent Garmin training, and what it remembers about their preferences.
-> If something it needs is missing, it asks, one question at a time. It never guesses.
-> Then it proposes which sessions to move, shorten, replace or skip, with its reasons and the training rules it used, each from a citation-verified library.
-> Before the athlete sees it, the page checks the proposal itself: a calendar clash, a blown time limit, or training through an injury switches Approve off. The full Python version also has a separate AI reviewer.
-> Nothing is written until the athlete approves, and success is measured as planned sessions kept.
+> The athlete types what changed, in plain words. The agent reads 4 records: their calendar, their plan, their recent Garmin training, and what it remembers about their preferences.
+> Then it decides. If something it needs is missing, it asks, one question at a time. It never guesses. If the athlete reports illness or injury, it refuses to plan training and offers their own choices instead.
+> Otherwise it proposes which sessions to move, shorten, replace or skip, with its reasons and the training rules it used, each from a citation-verified library.
+> Before the athlete sees it, the page checks the proposal itself: a calendar clash, a blown time limit, or training through an injury switches Approve off. The full Python version also has a separate reviewer Agent.
+> The athlete approves, edits or rejects. Edit sends it back to re-plan. Only Approve writes to the calendar, and success is measured as planned sessions kept.
 
 ## 1:35–2:35 · Live demo (~60 words; let the screen carry it)
 **Slide 5 (two seconds), then the prototype**
@@ -44,10 +44,10 @@ Target length: **3:45** (15 seconds of buffer), about 550 spoken words. Record i
 ## 2:35–3:30 · Evaluation (~115 words)
 **Slide 6 → 7** (optional: a quick cut to the prototype’s Evals tab showing 5 of 5)
 
-> I tested five made-up athletes, each built to break the agent a different way: a happy path, food poisoning, two weeks abroad with one resistance band, a swollen ankle, and a week with only 40 minutes free. Each has written expectations from my plan, and I judged every real-AI run myself.
-> Round one looked like five passes, but on review, Marcus’s refusal offered upper-body workouts my plan doesn’t allow.
-> Round two found more: Annie’s suggestions looped, and Leo’s plan showed 60 minutes against a 40-minute limit and could still be approved. The cause was the page, not the agent: it counted one combined session twice.
-> I fixed each one, and in round three, all five passed.
+> I tested 5 made-up athletes, each built to break the agent a different way: a happy path, food poisoning, two weeks abroad with one resistance band, a swollen ankle, and a week with only 40 minutes free. Each has written expectations from my plan, and I judged every real-AI run myself.
+> Round 1 looked like 5 passes, but on review, Marcus’s refusal initially immediately offered upper-body workouts my plan doesn’t allow.
+> Round 2 found more: Annie’s suggestions looped, and Leo’s plan showed 60 minutes against a 40-minute limit and could still be approved. The cause was the page, not the agent: it counted one combined session twice.
+> I fixed each one, and in round three, all 5 passed.
 
 ## 3:30–3:45 · Closing (~45 words)
 **Slide 8, then your face**
@@ -58,8 +58,8 @@ Target length: **3:45** (15 seconds of buffer), about 550 spoken words. Record i
 ---
 
 ## If you run long, cut these first
-1. In the problem: the gym-member sentence (“In a study of over five thousand gym members…”). Slide 3 still shows the 63%.
-2. In the solution: “The full Python version also has a separate AI reviewer.”
+1. In the problem: the gym-member sentence (“In a study of over 5,000 gym members…”). Slide 3 still shows the 63%.
+2. In the solution: “The full Python version also has a separate reviewer Agent.”
 3. In the demo: step 3 (Edit to the evening). Go straight from the proposal to Approve.
 4. In the closing: the “Next” sentence. Slide 8 still shows it.
 

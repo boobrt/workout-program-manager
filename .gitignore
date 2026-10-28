@@ -19,3 +19,6 @@ prototype 2/
 
 # Local preview copy of prototype/studio/index.html with the AI helper filled in
 prototype/studio-preview/
+
+# Obsidian vault settings (the capstone folder is opened as a vault for editing docs)
+.obsidian/
