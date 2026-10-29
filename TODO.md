@@ -63,7 +63,7 @@
 - [ ] Final metrics and results write-up
 
 ### Deliverables
-- [ ] Submit the PRD (`docs/capstone-prd.xlsx`, the course's Agentic AI PRD template) the way the course asks
+- [ ] Submit the PRD (`docs/capstone-prd.xlsx`, final as of Oct 29) by email, as Bob plans; confirm the address and whether the video link goes in the same email
 - [ ] Script and record the 4-minute video
 
 ---
