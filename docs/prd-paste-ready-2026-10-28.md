@@ -361,9 +361,7 @@ Solution demo (1:45–2:45): the prototype running on real AI. Annie’s new Wed
 
 Eval rigor (2:45–3:35): five made-up athletes, each built to break the agent a different way, from a swollen ankle to a week with only 40 free minutes, judged by me against written expected outcomes in three rounds of real-AI tests. Round 1 looked like five passes until review found Marcus’s refusal offering upper-body workouts. Round 2 found Annie’s suggestions looping and Leo’s plan showing 60 minutes against a 40-minute limit that could still be approved; the cause was the page counting one combined session twice. After the fixes, all five passed in Round 3.
 
-Impact and launch (3:35–3:50): the impact is measured as planned sessions kept rather than skipped. The closing slide lists the next steps: real Notion and Garmin data, voice input, and a research agent that proposes new rules for my approval. I close on the main lesson: the hard part wasn’t generating a plan; it was knowing when not to.
-
-> **Note, not for pasting:** the question also asks for the **launch plan**, and the script doesn’t say one out loud. Option: add about 6 seconds to the close, e.g. “Next is a small pilot with volunteers who already follow a plan.” (the script is at about 3:50, so it still fits under 4:00). If you add it, also add this sentence to the last paragraph above: “The launch plan is a small pilot with volunteers who already follow a structured plan.”
+Impact and launch (3:35–3:50): the impact is measured as planned sessions kept rather than skipped. The closing slide lists the next steps: real Notion and Garmin data, voice input, and a research agent that proposes new rules for my approval. The launch plan is a small, staged pilot with volunteers who already follow a structured plan. I close on the main lesson: the hard part wasn’t generating a plan; it was knowing when not to.
 
 ---
 
