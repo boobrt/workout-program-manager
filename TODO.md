@@ -5,8 +5,8 @@
 > Show, through a capstone-quality AI PRD, spec, working prototype, and 4-minute video, that an AI agent can keep a busy, frequently traveling athlete progressing toward their training goal when life disrupts the plan. It does this by proposing safe, evidence-informed plan changes that the athlete reviews and approves, instead of the athlete rebuilding the plan by hand or skipping workouts.
 
 ## Course deliverables (Product Faculty AIPM capstone)
-- [ ] **AI PRD**, submitted in the course's Google Doc template (shared with assignments@productfaculty.com)
-- [ ] **4-minute video**: problem → demo → evaluation set → results. Skip prompt syntax.
+- [x] **AI PRD**, submitted by email (Oct 2026); originally planned as in the course's Google Doc template (shared with assignments@productfaculty.com)
+- [x] **4-minute video** (recorded and emailed, Oct 2026): problem → demo → evaluation set → results. Skip prompt syntax.
 - [ ] Confirm submission deadlines on the course portal
 
 ---
@@ -63,8 +63,9 @@
 - [ ] Final metrics and results write-up
 
 ### Deliverables
-- [ ] Submit the PRD (`docs/capstone-prd.xlsx`, final as of Oct 29) by email, as Bob plans; confirm the address and whether the video link goes in the same email
-- [ ] Script and record the 4-minute video
+- [x] Submit the PRD (`docs/capstone-prd.xlsx`, final as of Oct 29) by email
+- [ ] Finish the LMS submission: workflow/project choice + after-building answers (drafted Oct 30)
+- [x] Script and record the 4-minute video
 
 ---
 
