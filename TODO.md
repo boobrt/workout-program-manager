@@ -16,6 +16,7 @@
 |---|---|---|---|
 | 1 | 2026-10-07 | Interview → draft the PRD | In progress |
 | 2 | 2026-10-13 | Build the LMS prototype from the Product Faculty build kit | `prototype.zip` built and passes the upload check; sample mode tested; real-AI eval runs still to do |
+| 3 | 2026-10-31 | Set up GitHub as a CV (Product Faculty “GitHub Is Your New CV” deck) | Recruiter README (Problem, Decision, Proof, Next), PRD as a page, live prototype on GitHub Pages, course kit and first build removed, repo public |
 
 ---
 

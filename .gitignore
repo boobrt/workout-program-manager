@@ -11,7 +11,7 @@ runs/
 # Mac system files
 .DS_Store
 
-# The prototype page as rebuilt by prototype/build.py (prototype.zip is kept)
+# Output folder of the first prototype build (prototype/build.py, removed Oct 31; still in git history)
 prototype/site/
 
 # Unzipped test copies of prototype.zip
@@ -22,3 +22,6 @@ prototype/studio-preview/
 
 # Obsidian vault settings (the capstone folder is opened as a vault for editing docs)
 .obsidian/
+
+# Product Faculty build kit (course material): kept on this Mac for publish_pages.py, not published
+prototype/kit/

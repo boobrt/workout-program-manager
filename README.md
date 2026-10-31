@@ -1,102 +1,36 @@
-# Workout Program Manager: capstone data kit
+# Workout Program Manager
 
-All personas and data are **fictional and synthetic**. Nothing here comes from a real person, calendar, or device.
+An AI agent that keeps your training plan on track when life gets in the way. The athlete says what changed; the agent proposes how to move, shorten, replace or skip sessions, and nothing changes until the athlete approves.
 
-## What's here
+**[Try the live prototype →](https://boobrt.github.io/workout-program-manager/)** · [PRD](docs/PRD.md) · [Eval results](docs/eval-final-2026-10-25.md) · [How it's built](docs/repo-guide.md)
 
-```
-capstone/
-├── rules/
-│   └── training-rules-library.md   Rules the agent may use and cite (citations verified 2026-10-04)
-├── personas/annie/                  Test case ANNIE-01 (happy path)
-│   ├── workout-plan.md             → Notion page: 18-week marathon plan, Annie is in week 10
-│   ├── calendar.csv                → Notion database: weeks 10–11, incl. the new Wed pickup
-│   ├── garmin-activities.csv       Garmin-style export: runs from weeks 6–9
-│   ├── garmin-daily-wellness.csv   Garmin-style daily HRV / sleep / readiness, Sep 21–Oct 5
-│   ├── memory.md                   What the agent remembers (preferences, goals, availability)
-│   ├── disruption-message.md       The user's request (the test input)
-│   ├── expected-outcome.md         Answer key: ground truth, acceptable options, 12 pass/fail checks
-│   └── reference-proposal.json     One good answer, in machine-checkable form
-└── tools/
-    ├── generate_annie.py           Rebuilds Annie's CSVs (deterministic)
-    ├── validate_annie_data.py      Checks every file agrees with every other file
-    ├── check_proposal.py           Automated graders A1–A6 for an agent's proposal
-    └── test_check_proposal.py      Proves the graders pass good answers and catch bad ones
-```
+Bob Girardi · capstone for Product Faculty's AI Product Management course, October 2026 · built on Claude · every athlete, calendar and record here is made up
 
-`personas/greg`, `dora`, `marcus` and `leo` hold the other four test cases (illness, a 14-day trip with no gym, an injury the agent must refuse, a 40-minute week). Each has a plan, calendar, memory, Garmin-style exports and the disruption message.
+## Problem
 
-## The prototype (Product Faculty LMS upload)
+**Who it's for:** people who train 3 to 6 days a week toward a goal, such as a marathon, a gran fondo or a competition, while their schedules keep changing.
 
-**Current version (since Oct 24, 2026): `prototype/studio/index.html`.** The prototype is now built in the Product Faculty studio, one whole page at a time, and this file is the latest page (bring it back into the studio as is). It has moved well past `src/` and `build.py` below, so do not rebuild it from those. Real-AI eval results are in `docs/eval-*.md` and are recorded inside the page.
+**What hurts:** when a busy week, a trip or an illness hits, re-planning lands at the worst moment, so people skip workouts instead of adapting them. 63% of gym members quit within three months ([Sperandei et al., 2016](https://doi.org/10.1016/j.jsams.2015.12.522)), and elite athletes who completed more than 80% of their planned weeks were 7 times more likely to reach their goal ([Raysmith & Drew, 2016](https://doi.org/10.1016/j.jsams.2015.12.515)). The job isn't a better plan; it's keeping the benefits of the one you have.
 
-The original build, kept for reference:
+## Decision
 
-```
-prototype/
-├── src/          The page's own code (app.js, body.html, styles.css) and make_data.py, which packs personas/ into data.js
-├── kit/          The Product Faculty build kit: starter page, PFAI helper, upload check
-└── build.py      Builds the page and writes ../prototype.zip
-prototype.zip     The file to upload in the LMS
-```
+One loop, end to end: the athlete types what changed; the agent reads their calendar, plan, Garmin-style training data and preferences; then it asks one question, proposes changes, or refuses.
 
-```bash
-cd capstone/prototype
-python3 -I src/make_data.py   # only after changing files in personas/
-python3 -I build.py
-```
+- **It refuses medical calls.** For illness or injury it gives no training advice and points to a clinician. It offers only rest, a pause, or scheduling around the clinician's guidance, as the athlete's choice.
+- **It cites only verified rules.** Each change names its rule from a small, citation-checked library, and coaching practice is labelled as practice, not research.
+- **The page checks the agent.** Before the athlete decides, code checks every proposal for calendar clashes, time limits and invented sources, and holds plans that break a hard limit. Edit re-plans; only Approve writes to the calendar.
+- **What I cut:** live Notion, Google Calendar and Garmin connections, voice input, and using biometrics to judge recovery.
 
-## The agent (Annie loop)
+## Proof
 
-```
-agent/
-├── loop.py      Main agent: instructions, tools (read_source, ask_user, stop_and_refer, submit_proposal), the loop, Accept/Edit/Reject
-├── verify.py    Verification sub-agent: code checks + an independent Claude review of each draft
-├── state.py     Per-run copy of the data, rules lookup, and the writes made only after Accept
-├── config.py    Model (Claude Opus 5.5), effort levels, max 2 redrafts
-└── run.py       Command-line entry point
-tests/test_loop_offline.py   Tests every path of the loop with a scripted stand-in for Claude (free, no key)
-personas/annie/case.json     The test input plus scripted answers for repeatable runs
-```
+- **[Live prototype](https://boobrt.github.io/workout-program-manager/)** with five made-up athletes: a recurring school-pickup clash, food poisoning, a 14-day trip with no gym, a swollen ankle, and a week with 40 free minutes. It runs in sample mode; paste your own Claude API key for real AI.
+- **Metric:** planned sessions kept, shown on every proposal (Annie's keeps 2 of 2).
+- **Evals:** I judged every real-AI run myself against expectations written beforehand, over three rounds. Round 1 looked like 5 of 5 until review found the injury refusal offering upper-body workouts. Round 2 caught a suggestion loop, and a plan showing 60 minutes against a 40-minute limit that could still be approved (the page, not the agent, counted one combined session twice). After the fixes, round 3 passed 5 of 5. [Final results](docs/eval-final-2026-10-25.md) · [round 2](docs/eval-round2-2026-10-25.md) · [round 1](docs/eval-baseline-2026-10-24.md)
 
-**One-time setup:** copy `.env.example` to `.env` and paste your Anthropic API key after `ANTHROPIC_API_KEY=`.
+## Next
 
-```bash
-cd capstone
-.venv/bin/python -m agent.run annie                # you answer the agent and choose Accept / Edit / Reject
-.venv/bin/python -m agent.run annie --scripted     # repeatable eval run using case.json answers
-.venv/bin/python -m agent.run annie --thinking     # also show summaries of the agent's reasoning
-```
+- **What I learned:** the hard part wasn't generating a plan; it was knowing when not to. Most of the work went into questions, refusals and checks, and into not trusting the model's own arithmetic.
+- **Before a pilot:** ask one focused question at a time with clickable answers (including morning or evening preference) instead of assuming, and pass repeated runs, not one per case.
+- **Then:** a small volunteer pilot measuring first-proposal edit rate and approve, edit, reject and revert rates; live calendar and wearable connections after that.
 
-Each run gets its own folder under `runs/` with a copy of the data (approved changes are written **there**, never to `personas/`), the full transcript, an event log (every tool call, verifier verdict, and decision), and the final `proposal.json` to grade:
-
-```bash
-.venv/bin/python tools/check_proposal.py runs/<run folder>/proposal.json
-```
-
-Safety: every request uses server-side fallback (`fallbacks: "default"`), so if a safety filter declines a request, it's retried on Anthropic's recommended fallback model instead of failing.
-
-## Run the checks
-
-```bash
-cd capstone/tools
-python3 validate_annie_data.py      # expect: 0 failure(s)
-python3 test_check_proposal.py      # expect: 11/11 behaved as expected
-python3 check_proposal.py ../personas/annie/reference-proposal.json
-```
-
-## Putting it into Notion
-1. **Plan:** create a page and paste `workout-plan.md` (Notion converts the Markdown, tables included).
-2. **Calendar:** import `calendar.csv` as a database (*Import → CSV*). Change `Start` and `End` to **Date** properties and `Type` to **Select**. Add the database to Notion Calendar so the events appear there.
-   - Notion databases don't do recurring events, so each occurrence is its own row. The `Recurring` column records the pattern (e.g., "Weekly on Wed, Oct 7 to Dec 9, 2026") so the agent can reason about future weeks.
-3. **Garmin files and memory:** keep these as files the agent reads, or paste them into Notion pages. Real Garmin exports have more columns; these use a realistic subset.
-
-## How the pieces map to the workflow diagram
-| Diagram box | File |
-|---|---|
-| Notion Calendar | `calendar.csv` |
-| Workout plan (Notion MD) | `workout-plan.md` |
-| Garmin-style CSV | `garmin-activities.csv`, `garmin-daily-wellness.csv` |
-| Memory: preferences + past changes | `memory.md` |
-| Training rules library | `rules/training-rules-library.md` |
-| Offline evals: test set / graders | `expected-outcome.md`, `check_proposal.py` |
+**In this repo:** [PRD](docs/PRD.md) · [prototype source](prototype/studio/index.html) · [rules library](rules/training-rules-library.md) · [test athletes](personas/) · [Python agent](agent/) · [video script](docs/video-script.md) · [developer guide](docs/repo-guide.md)
